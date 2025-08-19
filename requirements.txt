@@ -1,0 +1,32 @@
+# --- Core service ---
+fastapi==0.111.0
+uvicorn[standard]==0.30.0
+
+# --- PDF/text extraction ---
+pymupdf==1.24.4         # fitz
+pdfplumber==0.11.4
+Pillow==10.4.0
+
+# --- OCR (needs Tesseract binary installed on OS) ---
+pytesseract==0.3.10
+
+# --- Data wrangling ---
+pandas==2.2.2
+numpy==1.26.4
+
+# --- Embeddings / retrieval / reranking ---
+sentence-transformers==3.0.1
+faiss-cpu==1.8.0
+rank-bm25==0.2.2
+scikit-learn==1.5.1
+transformers==4.43.3
+torch>=2.2.0
+datasets>=2.14.0
+
+# --- Utilities ---
+tqdm==4.66.4
+python-rapidjson==1.16
+accelerate
+
+
+gradio==4.0.2

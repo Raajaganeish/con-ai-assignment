@@ -1,0 +1,36 @@
+# Byte-compiled / cache / temp files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.tmp
+*.log
+
+# VSCode/IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Model output directories/checkpoints
+finetuned_flan_t5_small/
+artifacts/
+*.ckpt
+*.pt
+*.bin
+*.h5
+*.onnx
+
+# Data & results
+baseline_results.json
+finetuned_results.json
+
+# PDFs
+pdf/*.pdf
+
+# Gradio/Streamlit temp files
+*.gradio/
+*.streamlit/
+
+# System files
+*.swp
+*~
