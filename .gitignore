@@ -24,8 +24,9 @@ artifacts/
 baseline_results.json
 finetuned_results.json
 
-# PDFs
-pdf/*.pdf
+#PDF
+pdf/*
+!pdf/.gitkeep
 
 # Gradio/Streamlit temp files
 *.gradio/
