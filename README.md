@@ -64,15 +64,9 @@ python app/embedding_indexing.py --artifacts_dir ./artifacts
 python app/generate_response.py --artifacts_dir ./artifacts --size 100 --query "What was PayPal's revenue in 2023?" --topk 8
 ```
 
-**From UI:**
-```bash
-python app/interface.py
-```
-Then open the link shown in your terminal (usually http://127.0.0.1:7860).
-
 ---
 
-## 5. (Optional) Fine-Tune & Evaluate
+## 5. Fine-Tune & Evaluate
 
 **Run baseline evaluation:**
 ```bash
@@ -88,7 +82,11 @@ python app/fine_tune_flan_t5.py
 ```bash
 python app/evaluate_finetuned_model.py
 ```
-
+**From UI:**
+```bash
+python app/interface.py
+```
+Then open the link shown in your terminal (usually http://127.0.0.1:7860).
 ---
 
 ## Notes
