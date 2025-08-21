@@ -20,7 +20,7 @@ pip install -r requirements.txt
 
 ---
 
-## 2. Prepare Data
+## 2. Prepare Data (Currently part of repo)
 
 Download these files and place them in the `pdf/` folder:
 - `pdf/2023-Annual-Report.pdf`
@@ -32,27 +32,27 @@ Download these files and place them in the `pdf/` folder:
 
 **Step 1: Extract text from PDFs**
 ```bash
-python app/extract.py --pdf_dir ./pdf --artifacts_dir ./artifacts
+python app/extract.py
 ```
 
 **Step 2: Segment into sections**
 ```bash
-python app/segment.py --pdf_dir ./pdf --artifacts_dir ./artifacts
+python app/segment.py
 ```
 
 **Step 3 (Optional): Build Q/A dataset**
 ```bash
-python app/build_qa.py --artifacts_dir ./artifacts
+python app/build_qa.py
 ```
 
 **Step 4: Create retrieval chunks**
 ```bash
-python app/chunk_util.py --artifacts_dir ./artifacts
+python app/chunk_util.py
 ```
 
 **Step 5: Build retrieval indices**
 ```bash
-python app/embedding_indexing.py --artifacts_dir ./artifacts
+python app/embedding_indexing.py
 ```
 
 ---
