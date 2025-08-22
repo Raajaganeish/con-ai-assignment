@@ -25,7 +25,6 @@ baseline_results.json
 finetuned_results.json
 
 #PDF
-pdf/*
 !pdf/.gitkeep
 
 # Gradio/Streamlit temp files

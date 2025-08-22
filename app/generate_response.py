@@ -305,21 +305,6 @@ def main():
     conf = retrieval_confidence([h.score for h in hits])
     numeric_flag = is_numeric_intent(args.query)
 
-    # ---- Extractive-first (verbatim) ----
-    extracted = extract_numeric_answer(args.query, contexts) if numeric_flag else None
-    if extracted:
-        print(f"Answer: {extracted}\n")
-        print(f"Confidence: {conf}")
-        print("Provenance:")
-        for h in hits:
-            m = h.meta
-            print(f"- doc={m.get('doc_id')} section={m.get('section')} pages={m.get('pages')} score={h.score:.3f}")
-        # Output-side guardrail report (does not modify answer)
-        g = grounding_check(extracted, contexts, numeric_flag)
-        print(f"Guardrail: {json.dumps({'type':'output','status': g['status']})}")
-        Path(args.guardrail_report).write_text(json.dumps({"type":"output", **g}, indent=2), encoding="utf-8")
-        return
-
     # ---- Generative fallback ----
     tokenizer = AutoTokenizer.from_pretrained(GEN_MODEL)
     model = AutoModelForSeq2SeqLM.from_pretrained(GEN_MODEL)
